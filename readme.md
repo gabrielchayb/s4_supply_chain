@@ -2,6 +2,8 @@ Projeto S4 Supply CRUD - Criado por Gabriel Ribeiro Filice Chayb
 
 O S4 Supply CRUD foi um projeto desenvolvido para aplicar funcionalidades CRUD (Create, Read, Update, Delete) em um banco de dados real. De maneira simples, intuitiva e rápida, o propósito da aplicação é demonstrar que soluções reais podem ser implementadas de maneira objetiva e eficiente, organizada e funcional, dentro de um prazo estimulado por contrato. Por isso foi desenvolvimento em menos de 24hrs.
 
+O principal pilar do projeto foi documentar passo a passo como cada funcionalidade opera para que outros programadores possam entender o que foi feito e como foi feito, de maneira clara e objetiva. Respeitando as normas da PEP-8 e do clean code.
+
 Back-End: Python 
 Banco de Dados: MySQL 
 Front-End: Bootstrap (HTML e CSS), Flask
