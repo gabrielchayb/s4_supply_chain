@@ -15,7 +15,7 @@ mysql = MySQL(app)
 @app.route('/')
 def Index():
     cur = mysql.connection.cursor()
-    cur.execute("SELECT  * FROM students")
+    cur.execute("SELECT  * FROM students") #!
     data = cur.fetchall()
     cur.close()
 
