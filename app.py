@@ -15,14 +15,14 @@ mysql = MySQL(app)
 @app.route('/')
 def Index():
     cur = mysql.connection.cursor()
-    cur.execute("SELECT  * FROM students") #!
+    cur.execute("SELECT  * FROM product") #!
     data = cur.fetchall()
     cur.close()
 
 
 
 
-    return render_template('index2.html', students=data )
+    return render_template('index2.html', product=data )
 
 
 
@@ -32,10 +32,10 @@ def insert():
     if request.method == "POST":
         flash("Data Inserted Successfully")
         name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
+        description = request.form['description']
+        price = request.form['price']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO students (name, email, phone) VALUES (%s, %s, %s)", (name, email, phone))
+        cur.execute("INSERT INTO product (name, description, price) VALUES (%s, %s, %s)", (name, description, price))
         mysql.connection.commit()
         return redirect(url_for('Index'))
 
@@ -46,7 +46,7 @@ def insert():
 def delete(id_data):
     flash("Record Has Been Deleted Successfully")
     cur = mysql.connection.cursor()
-    cur.execute("DELETE FROM students WHERE id=%s", (id_data,))
+    cur.execute("DELETE FROM product WHERE id=%s", (id_data,))
     mysql.connection.commit()
     return redirect(url_for('Index'))
 
@@ -60,16 +60,17 @@ def update():
     if request.method == 'POST':
         id_data = request.form['id']
         name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
+        description = request.form['description']
+        price = request.form['price']
         cur = mysql.connection.cursor()
         cur.execute("""
-               UPDATE students
-               SET name=%s, email=%s, phone=%s
+               UPDATE product
+               SET name=%s, description=%s, price=%s
                WHERE id=%s
-            """, (name, email, phone, id_data))
+            """, (name, description, price, id_data))
         flash("Data Updated Successfully")
         mysql.connection.commit()
         return redirect(url_for('Index'))
+    
 if __name__ == "__main__":
      app.run(debug=True)

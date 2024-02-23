@@ -60,7 +60,7 @@
 
 
 
-                {% for row in students %}
+                {% for row in product %}
                 <tr>
                     <td>{{row.0}}</td>
                     <td>{{row.1}}</td>
@@ -121,7 +121,7 @@
 
                   <label>Description:</label>
 
-                  <input type="text" class="form-control" name="email" value="{{row.2}}">
+                  <input type="text" class="form-control" name="description" value="{{row.2}}">
 
 
                </div>
@@ -132,7 +132,7 @@
 
                   <label>Price:</label>
 
-                  <input type="text" class="form-control" name="phone" value="{{row.3}}">
+                  <input type="text" class="form-control" name="price" value="{{row.3}}">
 
 
                </div>
@@ -227,7 +227,7 @@
 
 
                   <label>Description:</label>
-                  <input type="text" class="form-control" name="email" required="1">
+                  <input type="text" class="form-control" name="description" required="1">
 
 
                </div>
@@ -237,7 +237,7 @@
 
 
                   <label>Price:</label>
-                  <input type="text" class="form-control" name="phone" required="1">
+                  <input type="text" class="form-control" name="price" required="1">
 
 
                </div>
