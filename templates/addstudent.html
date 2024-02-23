@@ -6,7 +6,7 @@
 
 <div class="panel=heading">
 
-<h2>Add Product <a class="pull-right btn btn-success" href="/">Back</a> </h2>
+<h2>Adicionar Produto <a class="pull-right btn btn-success" href="/">Voltar</a> </h2>
 
 </div>
 
@@ -14,10 +14,10 @@
 
 <div class="panel-body">
 
-<form action="{{ url_for('processtudent') }}" method="post">
+<form action="{{ url_for('processproduct') }}" method="post">
 <div class="form-group">
 
-    <label for="name">Product Name</label>
+    <label for="name">Nome do Produto:</label>
     <input type="text" class="form-control" name="name" id="name" required = "1"  >
 
 </div>
@@ -26,7 +26,7 @@
 
     <div class="form-group">
 
-    <label for="name">Product Description</label>
+    <label for="name">Descrição do Produto:</label>
     <input type="text" class="form-control" name="description" id="description" required = "1" >
 
 </div>
@@ -36,7 +36,7 @@
 
         <div class="form-group">
 
-    <label for="name">Product Price</label>
+    <label for="name">Preço do produto:</label>
     <input type="text" class="form-control" name="price" id="price" required = "1"  >
 
 </div>
@@ -46,7 +46,7 @@
         <input type="hidden" name="id" value="1">
 
      <input type="hidden" name="action" value="edit">
-     <input type="submit" class="btn btn-success" name="submit" value="Add Student">
+     <input type="submit" class="btn btn-success" name="submit" value="Add Product">
 
 </div>
 
